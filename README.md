@@ -61,7 +61,6 @@ Proyek ini adalah platform toko online yang dibangun menggunakan [CodeIgniter 4]
    ```bash
    php spark db:seed ProductSeeder
    ```
-    **Seeder data**
    ```bash
    php spark db:seed ProducCategorytSeeder
    ```
