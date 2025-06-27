@@ -43,18 +43,22 @@ History Transaksi Pembelian <strong><?= $username ?></strong>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <?php foreach ($product[$item['id']] as $index2 => $item2) : ?>
-                                        <?php echo $index2 + 1 . ")" ?>
-                                        <?php if ($item2['foto'] != '' and file_exists("img/" . $item2['foto'] . "")) : ?>
-                                            <img src="<?php echo base_url() . "img/" . $item2['foto'] ?>" width="100px">
-                                        <?php endif; ?>
-                                        <strong><?= $item2['nama'] ?></strong>
-                                        <?= number_to_currency($item2['harga'], 'IDR') ?>
-                                        <br>
-                                        <?= "(" . $item2['jumlah'] . " pcs)" ?><br>
-                                        <?= number_to_currency($item2['subtotal_harga'], 'IDR') ?>
-                                        <hr>
-                                    <?php endforeach; ?>
+                                    <?php if (isset($product[$item['id']]) && is_array($product[$item['id']])): ?>
+                                        <?php foreach ($product[$item['id']] as $index2 => $item2) : ?>
+                                            <?php echo $index2 + 1 . ")" ?>
+                                            <?php if ($item2['foto'] != '' and file_exists("img/" . $item2['foto'] . "")) : ?>
+                                                <img src="<?php echo base_url() . "img/" . $item2['foto'] ?>" width="100px">
+                                            <?php endif; ?>
+                                            <strong><?= $item2['nama'] ?></strong>
+                                            <?= number_to_currency($item2['harga'], 'IDR') ?>
+                                            <br>
+                                            <?= "(" . $item2['jumlah'] . " pcs)" ?><br>
+                                            <?= number_to_currency($item2['subtotal_harga'], 'IDR') ?>
+                                            <hr>
+                                        <?php endforeach; ?>
+                                    <?php else: ?>
+                                        <em>Tidak ada detail produk.</em>
+                                    <?php endif; ?>
                                     Ongkir <?= number_to_currency($item['ongkir'], 'IDR') ?>
                                 </div>
                             </div>

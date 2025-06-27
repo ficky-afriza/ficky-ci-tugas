@@ -127,7 +127,7 @@ class TransaksiController extends ResourceController
     }
 
     public function buy()
-    {
+    { 
         if ($this->request->getPost()) { 
             $dataForm = [
                 'username' => $this->request->getPost('username'),
