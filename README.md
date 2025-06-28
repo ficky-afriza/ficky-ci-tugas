@@ -104,5 +104,6 @@ Proyek menggunakan struktur MVC CodeIgniter 4:
   - v_login.php                   - Halaman login pengguna
   - v_produk.php                  - Tampilan daftar produk
   - v_produkPDF.php               - Tampilan produk dalam format PDF (biasanya untuk export/print)
+  - v_prifile.php                 - Tampilan prifile
 - public/img - Gambar produk dan aset
 - public/NiceAdmin - Template admin
