@@ -115,7 +115,7 @@ Proyek menggunakan struktur MVC CodeIgniter 4:
   - v_produk.php                  - Tampilan daftar produk
   - v_produkPDF.php               - Tampilan produk dalam format PDF (biasanya untuk export/print)
   - v_prifile.php                 - Tampilan prifile
-- public/dashboard-toko/img - Gambar produk dan aset
+- public/img - Gambar produk dan aset
 - public/dashboard-toko
   - index.php                     - Halaman utama dashboard toko yang menampilkan data dan aktivitas toko secara real-time, serta menjadi pusat kontrol bagi user/admin toko
 - public/NiceAdmin - Template admin
