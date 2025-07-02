@@ -24,6 +24,14 @@ class Home extends BaseController
         public function index()
         {
             $product = $this->product->findAll();
+            $diskonModel = new \App\Models\DiskonModel();
+            $today = date('Y-m-d');
+            $diskon = $diskonModel->where('tanggal', $today)->first();
+            $nominal_diskon = $diskon ? $diskon['nominal'] : 0;
+
+            foreach ($product as &$p) {
+                $p['diskon'] = $nominal_diskon;
+            }
             $data['product'] = $product;
             return view('v_home', $data);
         }

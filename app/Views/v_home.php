@@ -20,6 +20,7 @@ if (session()->getFlashData('success')) {
             echo form_hidden('nama', $item['nama']);
             echo form_hidden('harga', $item['harga']);
             echo form_hidden('foto', $item['foto']);
+            echo form_hidden('diskon', isset($item['diskon']) ? (string)$item['diskon'] : '0');
             ?>
             <div class="card">
                 <div class="card-body">
